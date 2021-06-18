@@ -112,7 +112,7 @@ class ProfileFields
                 'regex:/^[\pL\s\-]+$/u',
             ],
             'address' => 'required|max:255',
-            'contactNumber' => 'required|regex:/^\+?[0-9\s]{6}$/',
+            'contactNumber' => 'required|regex:/^\+?[0-9\s]{6,}$/', //min of 6 digits
             'gender' => 'required|in:' . implode(",", self::$fields['gender']),
             'civilStatus' => 'required|in:' . implode(",", self::$fields['civil_status']),
             'birthday' => 'required|date_format:Y-m-d',

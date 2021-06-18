@@ -3,7 +3,8 @@
     "private": true,
     "scripts": {
         "env:dev": "mv .env .env.prod && cp .env.dev .env.dev.2 && mv .env.dev.2 .env",
-        "env:prod": "mv .env .env.dev && cp .env.prod .env.prod.2 && mv .env.prod.2 .env"
+        "env:prod": "mv .env .env.dev && cp .env.prod .env.prod.2 && mv .env.prod.2 .env",
+        "reset": "./artisan migrate:fresh --seed"
     },
     "devDependencies": {}
 }
